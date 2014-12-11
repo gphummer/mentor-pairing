@@ -5,10 +5,9 @@ require 'spec_helper'
 feature "User requests an appointment" do
   before do
     time = Time.now
-
-    # User.create!()
-    # Availability.create!(start_time: time, end_time: time + 1.hour, mentor_id: 1, city: "Chicago",
-    #                        timezone: "America/Chicago")
+    FactoryGirl.create(:availability)
+    User.create(email: 'gphummer@gmail.com', first_name: 'Grant', last_name: 'Hummer', activated: true,
+                twitter_handle: 'granthummer')
   end
 
   scenario "when user creates a new mentoring request" do
@@ -26,6 +25,6 @@ feature "User requests an appointment" do
 
     click_on 'submit'
 
-    expect(page).to have_text("Thanks for signing up!!!!")
+    expect(page).to have_text("Thanks for signing up!!")
   end
 end
