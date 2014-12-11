@@ -20,9 +20,6 @@ feature "User requests an appointment" do
     fill_in "email", with: "gphummer@gmail.com"
 
 
-    # ar_param = {availability_id: 2, mentee_id: 3}
-    # AppointmentRequest.any_instance.stub(ar_param)
-
     click_on 'submit'
 
     expect(page).to have_text("Thanks for signing up!!")
