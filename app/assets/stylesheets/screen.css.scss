@@ -95,7 +95,7 @@ header, section, footer {
   height:$heart_width;
   width:$heart_width;
 
-  @media screen and (max-width: 629px) { 
+  @media screen and (max-width: 629px) {
     top:114px;
   }
 }
@@ -631,4 +631,30 @@ img.profpic{
 .remaining-avail-subtext {
   font-size:100px;
   line-height:100%;
+}
+
+/** Submit Request Confirm Page **/
+h1.confirm-page {
+  margin-bottom: 1em;
+}
+
+div.confirm-page {
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid 3px lightgray;
+  padding: 8px;
+}
+p.confirm-page {
+  margin: 5px;
+  color: white;
+}
+button#got-it {
+  margin-top: 0.5em;
+  font-size: 1.2em;
+  color: maroon;
+  border-radius: 1em;
+}
+button#got-it:hover {
+  color: white;
 }

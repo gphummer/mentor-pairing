@@ -9,11 +9,9 @@ class AppointmentRequestsController < ApplicationController
     mentee = User.find_by_email(params[:email])
 
     if mentee && mentee.activated?
-      # flash[:notice] = "An email has been sent to #{@availability.mentor.first_name}. Once they confirm the appointment, we'll let you know."
       AppointmentRequest.create!(:mentee => mentee, :availability => @availability)
       mentee.send_appointment_request(@availability)
       render :show
-      # redirect_to root_path
       return
     end
 
