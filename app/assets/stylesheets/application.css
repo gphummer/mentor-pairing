@@ -12,3 +12,10 @@
  *= require jquery.ui.datepicker
  *= require_tree .
  */
+h1.confirm-page {
+
+}
+
+p.confirm-page {
+
+}
